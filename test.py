@@ -7,6 +7,7 @@ for colonne in range(3):
         print('bien')
     else:
         print('pas bien')
+        
     
      
       
