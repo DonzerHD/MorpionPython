@@ -3,7 +3,6 @@ grille_morpion = [[' ',' ',' '],
                   [' ',' ',' ']]
 
 
-
 def grille():
   """
   Fonction qui affiche l'état actuel de la grille de jeu à l'écran.
