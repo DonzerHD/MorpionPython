@@ -3,7 +3,6 @@ grille_morpion = [[' ',' ',' '],
                   [' ',' ',' ']]
 
 
-
 def grille():
   print("  1 2 3")
   for i, ligne in enumerate(grille_morpion):
