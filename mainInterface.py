@@ -18,8 +18,10 @@ def joueurClique(bouton):
         verification()
         # changer le signe
         if signe == 'X':
+            bouton.config(text=signe, fg='red')
             signe = 'O'
         else:
+            bouton.config(text=signe, fg='blue')
             signe = 'X'
     else:
         messagebox.showinfo("Case vide" , "La case n'est pas vide.")
@@ -29,14 +31,23 @@ def joueurClique(bouton):
 def verification():
     #ligne
     for i in range(3):
-        gagner = True
+        gagnerligne = True
         for j in range(3):
             bouton = fenetre.grid_slaves(row=i,column=j)
             if bouton[0].cget("text") != signe:
-                gagner = False   
-        if gagner:
+                gagnerligne = False   
+        if gagnerligne:
             messagebox.showinfo("Gagné", "Le joueur avec le signe " + signe + " a gagné!")
             exit()
+    for i in range(3):
+        gagnercolonne = True
+        for j in range(3):
+            bouton = fenetre.grid_slaves(row=j,column=i)
+            if bouton[0].cget("text") != signe:
+                gagnercolonne = False   
+        if gagnercolonne:
+            messagebox.showinfo("Gagné", "Le joueur avec le signe " + signe + " a gagné!")
+            exit()  
     
 def egalite():
    pass
@@ -45,7 +56,7 @@ def egalite():
 #Création de la grille pour l'interface graphique
 for i in range(3):
     for j in range(3):
-        bouton = tk.Button(fenetre, text = ' ', font = ('Arial', 20), width = 4, height = 2)
+        bouton = tk.Button(fenetre, text = ' ', bg='white' ,font = ('Arial', 20), width = 4, height = 2)
         bouton.grid(row = i , column = j)
         bouton.config(command=lambda bouton=bouton: joueurClique(bouton))
         
