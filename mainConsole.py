@@ -106,4 +106,5 @@ while True:
   if egalite() == True:
     grille()
     print('match nul')
+    break
        
