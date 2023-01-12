@@ -16,7 +16,8 @@ def grille():
    
 def joueurSaisie(signe:str):
     """
-    Demande à l'utilisateur de saisir la ligne et la colonne où il souhaite placer son symbole et vérifie si l'emplacement est valide et met à jour la grille de jeu.
+    Fonction qui demande à l'utilisateur de saisir la ligne et la colonne où 
+    il souhaite placer son symbole et vérifie si l'emplacement est valide et met à jour la grille de jeu.
 
     Args:
     signe (str): Le symbole que le joueur souhaite placer 'O' ou 'X'.
@@ -44,7 +45,7 @@ def joueurSaisie(signe:str):
             
 def verification(signe:str) -> bool:
   """
-  Vérifie si le symbole passé en argument a gagné en vérifiant s'il y a trois des mêmes symboles alignés dans une ligne colonne ou diagonale sur la grille de jeu.
+  Fonction qui vérifie si le symbole passé en argument a gagné en vérifiant s'il y a trois des mêmes symboles alignés dans une ligne colonne ou diagonale sur la grille de jeu.
 
   Args:
   signe (str): Le symbole 'O' ou 'X' qui doit être vérifié.
@@ -70,10 +71,10 @@ def verification(signe:str) -> bool:
 
 def egalite() -> bool:
   """
-    Vérifie si la partie s'est terminée par un match nul en vérifiant si tous les emplacements sur la grille de jeu sont occupés.
+  Fonction qui vérifie si la partie s'est terminée par un match nul en vérifiant si tous les emplacements sur la grille de jeu sont occupés.
 
-    Returns:
-    bool: True si la partie est nulle (tous les emplacements sont occupés) ou False sinon.
+  Returns:
+  bool: True si la partie est nulle (tous les emplacements sont occupés) ou False sinon.
   """
   grille_pleine = True
   for ligne in grille_morpion:
