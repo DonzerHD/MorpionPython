@@ -3,7 +3,7 @@ import tkinter.messagebox as messagebox
 
 fenetre = tk.Tk()
 fenetre.resizable(False,False)
-fenetre.title("Morpion")
+fenetre.title("Morpion") 
 
 signe = 'X'                                                     
 
